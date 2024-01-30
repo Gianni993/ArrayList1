@@ -1,8 +1,7 @@
-public class Studente {
+public class Studente implements Comparable<Studente>{
 
     private String nome;
     private int age;
-
 
     //costruttore
     Studente(String nome, int age){
@@ -36,5 +35,10 @@ public class Studente {
     public void setAge(int age) {
         this.age = age;
     }
+
+    @Override
+  public int compareTo(Studente o) {
+    return this.nome.compareTo(o.nome);
+  }
 
 }
